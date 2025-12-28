@@ -137,6 +137,11 @@ app.get('/api/check-auth', (req, res) => {
 
 // ============== STATIC FILES ==============
 
+// Root redirect
+app.get('/', (req, res) => {
+  res.redirect('/rider');
+});
+
 // Rider form page
 app.get('/rider', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'rider.html'));
